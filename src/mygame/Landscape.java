@@ -16,6 +16,7 @@ import com.jme3.scene.Node;
  */
 public class Landscape {
     private Node sceneNode = new Node("Scene");
+<<<<<<< HEAD
 
     public Landscape(AssetManager assetManager) {
         assetManager.registerLocator("Resources.zip",ZipLocator.class);
@@ -26,11 +27,24 @@ public class Landscape {
             System.out.println("Scene failed to load!");
             sceneNode = new Node("EmptyScene"); // fallback so later code doesn’t crash
         }
+=======
+    public Landscape(AssetManager assetManager) {
+        assetManager.registerLocator("Resources.zip",ZipLocator.class);
+        sceneNode = (Node) assetManager.loadModel("MichaelMountain.j3o");
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
         lights();
         
     }
     
+<<<<<<< HEAD
     public Node getCourse() {
+=======
+    public Landscape getCourse() {
+        return this;
+    }
+    
+    public Node getSceneNode() {
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
         return sceneNode;
     }
     
@@ -40,4 +54,8 @@ public class Landscape {
         sun.setDirection(new Vector3f(1.4f,-1.4f,-1.4f));
         sceneNode.addLight(sun);
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
 }

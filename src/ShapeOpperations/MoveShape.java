@@ -7,6 +7,10 @@ package ShapeOpperations;
 
 import Shapes.Shapes;
 import com.jme3.app.SimpleApplication;
+<<<<<<< HEAD
+=======
+import com.jme3.math.Vector3f;
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
 import java.util.Scanner;
 
 /**
@@ -30,7 +34,11 @@ public class MoveShape {
         int y = inputScan.nextInt();
         int z = inputScan.nextInt();
         System.out.println("Now moving shape " + currentShape + " to < " + x + ", " + y + ", " + z + "> ");
+<<<<<<< HEAD
         shapes.move(currentShape, x, y, z);
+=======
+        shapes.get(currentShape).move(new Vector3f(x, y, z) );
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
     }
     
 }

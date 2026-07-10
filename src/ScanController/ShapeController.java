@@ -33,23 +33,39 @@ public class ShapeController {
     private static final String MAPPING_ROTATE = "Rotate";
     private static final Trigger TRIGGER_ROTATE = new MouseButtonTrigger(MouseInput.BUTTON_LEFT);
     SimpleApplication app;
+<<<<<<< HEAD
     Shapes shapes;
+=======
+    Shapes arrayModifer;
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
     int currentShape;
     
     public ShapeController(SimpleApplication app) {
         this.app = app;
+<<<<<<< HEAD
         shapes = new Shapes(app);
+=======
+        arrayModifer = new Shapes(app);
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
         currentShape= -1;
     }
     
     public void moveShape() {
         selectShape2();
         MoveShape mover = new MoveShape(app);
+<<<<<<< HEAD
         mover.move(shapes,currentShape);
     }
     
     public Geometry createShape(String shape, AssetManager ast) {
         return shapes.add(shape);
+=======
+        mover.move(arrayModifer,currentShape);
+    }
+    
+    public Geometry createShape(String shape, AssetManager ast) {
+        return arrayModifer.add(shape);
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
     }
     
     public void selectShape() {
@@ -75,9 +91,15 @@ public class ShapeController {
     public void rotateShape() {
         selectShape();
         Rotate control = new Rotate();
+<<<<<<< HEAD
         shapes.get(currentShape).addControl( control );
         app.getRootNode().detachChild(shapes.get(currentShape));
         app.getRootNode().attachChild(shapes.get(currentShape)); 
+=======
+        arrayModifer.get(currentShape).addControl( control );
+        app.getRootNode().detachChild(arrayModifer.get(currentShape));
+        app.getRootNode().attachChild(arrayModifer.get(currentShape)); 
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
         try { Thread.sleep(1000); } catch (InterruptedException ex) { }
         
     }

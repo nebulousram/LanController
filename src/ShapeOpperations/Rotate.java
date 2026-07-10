@@ -16,7 +16,13 @@ import com.jme3.scene.control.Control;
  */
 public class Rotate extends AbstractControl {
 
+<<<<<<< HEAD
     public Rotate() {}
+=======
+    public Rotate() {
+        
+    }
+>>>>>>> 4e7b250ab95bf0c478c004c258e592e0edb483b3
     
     @Override
     protected void controlUpdate(float tpf) {
