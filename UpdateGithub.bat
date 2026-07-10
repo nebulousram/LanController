@@ -1,3 +1,5 @@
+git remote -v
+git remote set-url origin https://github.com/nebulousram/LanController.git
 git init
 git remote add origin https://github.com/nebulousram/LanController.git
 git add .
